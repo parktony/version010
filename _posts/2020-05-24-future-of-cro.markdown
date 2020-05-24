@@ -3,6 +3,7 @@ layout: post
 title:  "What's in the future for CRO"
 date:   2020-05-24
 categories: jekyll update
+permalink: thoughts/:title/
 ---
 
 Occaecat nulla exercitation anim sint fugiat ex dolor in tempor aliqua ut. Ipsum ex voluptate velit aliqua amet. Eu occaecat dolore pariatur veniam laboris nisi tempor laborum esse consequat magna et laborum. Quis aliqua mollit officia minim magna laboris cillum irure ea sunt occaecat. Officia irure exercitation est aliqua ad sint aliqua culpa consectetur cupidatat. Lorem do do sint do aliqua incididunt. Occaecat non deserunt culpa aliquip.
