@@ -107,7 +107,7 @@
       &:not(:last-child) {
         margin-right: 0;
       }
-      margin-left: 20px;
+      margin-left: 10px;
     }
   }
 }
@@ -131,11 +131,12 @@
 
 }
 
-.site-title-footer {
+a.site-title-footer {
   @include relative-font-size(1.45);
   font-family: 'Times New Roman', Times, serif;
   font-weight: $bold-font-weight;
   font-style: italic;
+  border: 0;
   margin-bottom: 0;
 }
 

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Experiments
-permalink: /experiments/
-order: 9
+title: Thoughts
+permalink: /thoughts/
+order: 8
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
