@@ -32,7 +32,7 @@
   }
 
   @include media-query($on-palm) {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1.75);
   }
   
 }
@@ -63,7 +63,6 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
     border-radius: 5px;
     text-align: right;
 
@@ -129,6 +128,10 @@
     border-bottom: solid 1px $background-color;
   }
 
+  @include media-query($on-palm) {
+    padding: $spacing-unit 0;
+  }
+
 }
 
 a.site-title-footer {
@@ -167,6 +170,7 @@ a.site-title-footer {
 .footer-col-2 {
   width: -webkit-calc(50% - (#{$spacing-unit} / 2));
   width:         calc(50% - (#{$spacing-unit} / 2));
+  margin-bottom: 0;
 }
 
 @include media-query($on-laptop) {
@@ -174,11 +178,6 @@ a.site-title-footer {
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
     width:         calc(50% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -197,11 +196,6 @@ a.site-title-footer {
  */
 .page-content {
   padding: $spacing-unit 0;
-
-  @include media-query($on-palm) {
-    padding-top: 0;
-  }
-
   flex: 1;
 }
 
@@ -223,9 +217,16 @@ a.site-title-footer {
 
   > li {
     margin-bottom: $spacing-unit;
-    margin-top: $spacing-unit * 2;
     display: flex;
     justify-content: space-between;
+
+    &:first-child {
+      margin-top: $spacing-unit;
+    }
+
+    &:not(:first-child) {
+      margin-top: $spacing-unit*2;
+    }
 
     > .post-link {
       white-space: nowrap;
@@ -243,7 +244,7 @@ a.site-title-footer {
     }
   }
   .read-more {
-    margin-bottom: 30px;
+    margin-bottom: $spacing-unit*2;
 
     > a {
       color: $grey-color;
@@ -261,7 +262,16 @@ a.site-title-footer {
   color: $text-color;
 }
 
+.all-thoughts {
+  text-align: center;
+  margin-top: $spacing-unit*2;
 
+  a {
+    border-bottom: 1px solid;
+    padding-bottom: 2px;
+  }
+
+}
 
 /**
  * Posts

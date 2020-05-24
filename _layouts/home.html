@@ -1,5 +1,6 @@
 ---
 layout: default
+title: version010 by Tony Park
 ---
 
 <div class="home">
@@ -23,12 +24,12 @@ layout: default
       {{ post.excerpt }}
       {%- endif -%}
       {% if post.excerpt != post.content %}
-      <p class="read-more"><a href="{{ post.url | relative_url }}#more">Read more...</a></p>
+      <p class="read-more"><a href="{{ post.url | relative_url }}#more">Read on...</a></p>
       {% endif %}
       {%- endfor -%}
     </ul>
   {%- endif -%}
-
+  <div class="all-thoughts"><a href="{{ '/thoughts/' | relative_url }}">See all thoughts &#8594;</a></div>
 </div>
 <script>
 var todayDate = new Date();
