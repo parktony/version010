@@ -1,0 +1,42 @@
+---
+layout: page
+---
+
+<div class="thoughts">
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%d/%m/%y" -%}
+        <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+        </a>
+        <span class="post-date">{{ post.date | date: date_format }}</span>
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+<script>
+var todayDate = new Date();
+var datesList = document.getElementsByClassName("post-date");
+let msPerDay = 1000 * 60 * 60 * 24;
+for (let item of datesList) {
+    var date = item.textContent.split("/");
+    var postDate = new Date (date[1] + "/" + date[0] + "/" + date[2]);
+    var daysSince = Math.floor((todayDate - postDate)/msPerDay);
+    var daysSinceText = '';
+    if (daysSince < 1) {
+      item.innerHTML = "Today";
+    }
+    else if (daysSince < 2) {
+      item.innerHTML = "Yesterday";
+    }
+    else if (daysSince < 7) {
+      item.innerHTML = daysSince + " days ago";
+    }
+}
+</script>

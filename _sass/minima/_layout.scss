@@ -262,6 +262,17 @@ a.site-title-footer {
   color: $text-color;
 }
 
+.thoughts {
+  .post-list {
+    .post-link {
+      border: none;
+    }
+    li:not(:first-child) {
+      margin-top: $spacing-unit;
+    }
+  }
+}
+
 .all-thoughts {
   text-align: center;
   margin-top: $spacing-unit*2;
