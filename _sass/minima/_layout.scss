@@ -95,7 +95,7 @@
     }
 
     input:checked ~ .trigger {
-      display: block;
+      display: flex;
       padding-bottom: 5px;
     }
 
@@ -207,10 +207,31 @@
     margin-bottom: $spacing-unit;
     display: flex;
     justify-content: space-between;
+
+    > .post-link {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 600;
+      border-bottom: 1px solid $grey-color;
+    }
+
+    > .post-date {
+      margin-left: 10px;
+      font-weight: 300;
+    }
+  }
+  .read-more {
+    margin-bottom: 30px;
+
+    > a {
+      color: $grey-color;
+    }
+
   }
 }
 
-.post-meta {
+.post-date {
   color: $grey-color;
 }
 
@@ -236,6 +257,7 @@
 .post-title {
   @include relative-font-size(2);
   line-height: 1;
+
 }
 
 .post-content {
