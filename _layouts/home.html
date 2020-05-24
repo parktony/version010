@@ -22,10 +22,31 @@ layout: default
       {%- if site.show_excerpts -%}
       {{ post.excerpt }}
       {%- endif -%}
+      {% if post.excerpt != post.content %}
       <p class="read-more"><a href="{{ post.url | relative_url }}#more">Read more...</a></p>
+      {% endif %}
       {%- endfor -%}
     </ul>
   {%- endif -%}
 
 </div>
-<script>console.log('script fired!');</script>
+<script>
+var todayDate = new Date();
+var datesList = document.getElementsByClassName("post-date");
+let msPerDay = 1000 * 60 * 60 * 24;
+for (let item of datesList) {
+    var date = item.textContent.split("/");
+    var postDate = new Date (date[1] + "/" + date[0] + "/" + date[2]);
+    var daysSince = Math.floor((todayDate - postDate)/msPerDay);
+    var daysSinceText = '';
+    if (daysSince < 1) {
+      item.innerHTML = "Today";
+    }
+    else if (daysSince < 2) {
+      item.innerHTML = "Yesterday";
+    }
+    else if (daysSince < 7) {
+      item.innerHTML = daysSince + " days ago";
+    }
+}
+</script>
