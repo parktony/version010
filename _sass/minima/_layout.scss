@@ -6,6 +6,10 @@
   min-height: $spacing-unit * 3;
   padding-top: $spacing-unit * 3;
 
+  a {
+    border: none;
+  }
+  
   @include media-query($on-palm) {
     padding-top: 0;
   }
@@ -225,7 +229,7 @@ a.site-title-footer {
     }
 
     &:not(:first-child) {
-      margin-top: $spacing-unit*2;
+      margin-top: $spacing-unit*3;
     }
 
     > .post-link {
@@ -233,6 +237,7 @@ a.site-title-footer {
       overflow: hidden;
       text-overflow: ellipsis;
       font-weight: $bold-font-weight;
+      font-size: $base-font-size*1.1;
       border-bottom: 1px solid $grey-color;
     }
 
@@ -248,6 +253,7 @@ a.site-title-footer {
 
     > a {
       color: $grey-color;
+      border: none;
     }
 
   }
