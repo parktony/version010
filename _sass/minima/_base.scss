@@ -104,13 +104,20 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
   text-decoration: none;
   border-bottom: solid 1px $brand-color;
 
   &:hover {
-    color: $brand-color;
-    background-color: $brand-color-light;
+    background-color: $brand-color-lighter;
+  }
+
+  &:visited {
+    color: $brand-color-light;
+
+    &:hover {
+      color: $text-color;
+    }
+
   }
 }
 
